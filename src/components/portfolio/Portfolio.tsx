@@ -115,6 +115,29 @@ export function Portfolio() {
 
   return (
     <main className="relative">
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Meghana Reddy Madi",
+              jobTitle: "UI/UX Designer",
+              description:
+                "UI/UX designer crafting meaningful, human-centered digital experiences with empathy, research and editorial craft.",
+              url: "https://soft-lavender-dream.lovable.app/",
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Meghana Reddy Madi — UI/UX Designer Portfolio",
+              url: "https://soft-lavender-dream.lovable.app/",
+            },
+          ]),
+        }}
+      />
       <Intro />
       <LavenderCursor />
       <Navbar />
