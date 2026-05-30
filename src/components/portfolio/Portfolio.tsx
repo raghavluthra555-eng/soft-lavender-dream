@@ -179,6 +179,19 @@ export function Portfolio() {
               description:
                 "UI/UX designer crafting meaningful, human-centered digital experiences with empathy, research and editorial craft.",
               url: "https://soft-lavender-dream.lovable.app/",
+              email: "mailto:Meghanareddymadi@gmail.com",
+              telephone: "+1-203-589-9609",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "West Haven",
+                addressRegion: "CT",
+                addressCountry: "USA",
+              },
+              alumniOf: [
+                { "@type": "CollegeOrUniversity", name: "University of New Haven" },
+                { "@type": "CollegeOrUniversity", name: "Osmania University" },
+              ],
+              sameAs: ["https://www.linkedin.com/in/meghana-reddy-madi/"],
             },
             {
               "@context": "https://schema.org",
