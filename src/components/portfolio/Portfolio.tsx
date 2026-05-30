@@ -134,7 +134,7 @@ export function Portfolio() {
       <Leaf className="pointer-events-none fixed bottom-24 -right-10 w-40 text-lavender-deep/30 animate-sway" />
 
       {/* HERO */}
-      <Section id="home" className="pt-40 md:pt-48">
+      <Section id="home" className="pt-32 md:pt-48">
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-12 md:gap-16 items-center">
           <motion.div
             initial="hidden"
