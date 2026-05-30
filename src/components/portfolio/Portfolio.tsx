@@ -3,7 +3,7 @@ import { Navbar } from "@/components/portfolio/Navbar";
 import { LavenderCursor } from "@/components/portfolio/Cursor";
 import { Intro } from "@/components/portfolio/Intro";
 import { Leaf, Sparkle, Squiggle, CircleOrbit } from "@/components/portfolio/Decor";
-import portrait from "@/assets/portfolio/portrait.jpg";
+import portrait from "@/assets/portfolio/portrait.png";
 import workspace from "@/assets/portfolio/workspace.jpg";
 import collab from "@/assets/portfolio/collab.jpg";
 import education from "@/assets/portfolio/education.jpg";
