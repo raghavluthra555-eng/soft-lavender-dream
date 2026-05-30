@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 const items = [
   { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#process", label: "Process" },
-  { href: "#skills", label: "Skills" },
+  { href: "#focus", label: "Focus" },
+  { href: "#projects", label: "Work" },
+  { href: "#story", label: "My Story" },
+  { href: "#resume", label: "Resume" },
   { href: "#contact", label: "Contact" },
 ];
 
