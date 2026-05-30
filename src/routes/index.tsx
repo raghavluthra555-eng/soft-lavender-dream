@@ -35,29 +35,6 @@ export const Route = createFileRoute("/")({
         href: "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap",
       },
     ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Person",
-          name: "Meghana Reddy Madi",
-          jobTitle: "UI/UX Designer",
-          description:
-            "UI/UX designer crafting meaningful, human-centered digital experiences with empathy, research and editorial craft.",
-          url: "https://soft-lavender-dream.lovable.app/",
-        }),
-      },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Meghana Reddy Madi — UI/UX Designer Portfolio",
-          url: "https://soft-lavender-dream.lovable.app/",
-        }),
-      },
-    ],
   }),
   component: Portfolio,
 });
