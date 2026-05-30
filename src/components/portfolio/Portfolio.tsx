@@ -269,7 +269,7 @@ export function Portfolio() {
               />
               <img
                 src={collab}
-                alt="Design collaboration"
+                alt="Educational platform design mockups"
                 className="absolute -bottom-10 -right-6 w-2/3 rounded-3xl shadow-2xl object-cover aspect-square hidden md:block"
               />
               <Leaf className="absolute -top-8 -left-6 w-20 text-lavender-deep/60 animate-sway" />
@@ -369,7 +369,7 @@ export function Portfolio() {
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
                       src={p.img}
-                      alt={p.title}
+                      alt={`${p.title} — ${p.sub} UI/UX case study`}
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
                     />
@@ -463,7 +463,7 @@ export function Portfolio() {
           <div className="mt-20 grid gap-10 md:grid-cols-2 items-center">
             <img
               src={education}
-              alt="Design collaboration"
+              alt="Designer collaborating with team on UX research"
               loading="lazy"
               className="rounded-3xl lavender-glow object-cover w-full aspect-[5/3]"
             />
