@@ -328,6 +328,38 @@ export function Portfolio() {
         </div>
       </Section>
 
+      {/* FOCUS AREAS */}
+      <Section id="focus" eyebrow="Focus Areas">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+            <h2 className="font-display text-[clamp(2rem,5vw,4rem)] leading-tight max-w-2xl text-balance">
+              Less noise.{" "}
+              <span className="italic text-lavender-deep">More clarity.</span>
+            </h2>
+            <p className="max-w-sm text-muted-foreground">
+              The kinds of problems I love to sit with — and the lenses I bring
+              to each of them.
+            </p>
+          </div>
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {focusAreas.map((f, i) => (
+              <motion.div
+                key={f.t}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.06 }}
+                className="hover-lift rounded-3xl border border-border bg-card p-7"
+              >
+                <Sparkle className="h-5 w-5 text-lavender-deep" />
+                <h3 className="mt-5 font-display text-2xl">{f.t}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{f.d}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
       {/* ABOUT */}
       <Section id="about" eyebrow="About" className="bg-section">
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-12 md:gap-16 items-start">
