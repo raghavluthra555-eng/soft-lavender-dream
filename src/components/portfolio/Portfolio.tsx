@@ -265,12 +265,12 @@ export function Portfolio() {
               <img
                 src={workspace}
                 alt="Workspace with laptop, books and plants"
-                className="rounded-3xl border border-border lavender-glow object-cover w-full aspect-[4/5]"
+                className="rounded-3xl lavender-glow object-cover w-full aspect-[4/5]"
               />
               <img
                 src={collab}
                 alt="Design collaboration"
-                className="absolute -bottom-10 -right-6 w-2/3 rounded-3xl border border-border shadow-2xl object-cover aspect-square hidden md:block"
+                className="absolute -bottom-10 -right-6 w-2/3 rounded-3xl shadow-2xl object-cover aspect-square hidden md:block"
               />
               <Leaf className="absolute -top-8 -left-6 w-20 text-lavender-deep/60 animate-sway" />
             </div>
