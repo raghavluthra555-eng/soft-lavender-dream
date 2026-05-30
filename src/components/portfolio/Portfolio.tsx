@@ -1,6 +1,7 @@
 import { motion, useScroll, useSpring, type Variants } from "framer-motion";
 import { Navbar } from "@/components/portfolio/Navbar";
 import { LavenderCursor } from "@/components/portfolio/Cursor";
+import { Intro } from "@/components/portfolio/Intro";
 import { Leaf, Sparkle, Squiggle, CircleOrbit } from "@/components/portfolio/Decor";
 import portrait from "@/assets/portfolio/portrait.jpg";
 import workspace from "@/assets/portfolio/workspace.jpg";
@@ -29,7 +30,7 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className={`relative px-6 md:px-10 py-28 md:py-36 ${className}`}>
+    <section id={id} className={`relative px-5 sm:px-8 md:px-10 py-20 md:py-36 ${className}`}>
       {eyebrow && (
         <div className="mb-6 flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
           <span className="h-px w-10 bg-lavender" />
@@ -114,6 +115,7 @@ export function Portfolio() {
 
   return (
     <main className="relative">
+      <Intro />
       <LavenderCursor />
       <Navbar />
 
@@ -132,7 +134,7 @@ export function Portfolio() {
       <Leaf className="pointer-events-none fixed bottom-24 -right-10 w-40 text-lavender-deep/30 animate-sway" />
 
       {/* HERO */}
-      <Section id="home" className="pt-40 md:pt-48">
+      <Section id="home" className="pt-32 md:pt-48">
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-12 md:gap-16 items-center">
           <motion.div
             initial="hidden"
@@ -220,6 +222,7 @@ export function Portfolio() {
                 style={{
                   borderRadius: "48% 52% 45% 55% / 55% 45% 55% 45%",
                   aspectRatio: "4 / 5",
+                  border: "none",
                 }}
               />
               <span className="absolute -top-4 -right-2 inline-flex items-center gap-2 rounded-pill border border-border bg-card/80 px-4 py-2 text-xs backdrop-blur">
@@ -262,12 +265,12 @@ export function Portfolio() {
               <img
                 src={workspace}
                 alt="Workspace with laptop, books and plants"
-                className="rounded-3xl border border-border lavender-glow object-cover w-full aspect-[4/5]"
+                className="rounded-3xl lavender-glow object-cover w-full aspect-[4/5]"
               />
               <img
                 src={collab}
                 alt="Design collaboration"
-                className="absolute -bottom-10 -right-6 w-2/3 rounded-3xl border border-border shadow-2xl object-cover aspect-square hidden md:block"
+                className="absolute -bottom-10 -right-6 w-2/3 rounded-3xl shadow-2xl object-cover aspect-square hidden md:block"
               />
               <Leaf className="absolute -top-8 -left-6 w-20 text-lavender-deep/60 animate-sway" />
             </div>
@@ -362,7 +365,7 @@ export function Portfolio() {
                 className={`group relative ${i % 2 === 1 ? "lg:translate-y-16" : ""}`}
                 data-cursor="hover"
               >
-                <div className="relative overflow-hidden rounded-3xl border border-border bg-card hover-lift">
+                <div className="relative overflow-hidden rounded-3xl bg-card hover-lift">
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
                       src={p.img}
@@ -462,7 +465,7 @@ export function Portfolio() {
               src={education}
               alt="Design collaboration"
               loading="lazy"
-              className="rounded-3xl border border-border lavender-glow object-cover w-full aspect-[5/3]"
+              className="rounded-3xl lavender-glow object-cover w-full aspect-[5/3]"
             />
             <div>
               <h3 className="font-display text-3xl md:text-4xl text-balance">
