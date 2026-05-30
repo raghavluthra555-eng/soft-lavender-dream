@@ -1,5 +1,4 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": ".output/public",
-  "serverFunctions": "api/**"
+  "outputDirectory": ".output"
 }
