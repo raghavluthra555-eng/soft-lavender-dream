@@ -1,4 +1,4 @@
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll, useSpring, type Variants } from "framer-motion";
 import { Navbar } from "@/components/portfolio/Navbar";
 import { LavenderCursor } from "@/components/portfolio/Cursor";
 import { Leaf, Sparkle, Squiggle, CircleOrbit } from "@/components/portfolio/Decor";
