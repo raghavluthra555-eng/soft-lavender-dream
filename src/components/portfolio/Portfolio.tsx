@@ -222,6 +222,7 @@ export function Portfolio() {
                 style={{
                   borderRadius: "48% 52% 45% 55% / 55% 45% 55% 45%",
                   aspectRatio: "4 / 5",
+                  border: "none",
                 }}
               />
               <span className="absolute -top-4 -right-2 inline-flex items-center gap-2 rounded-pill border border-border bg-card/80 px-4 py-2 text-xs backdrop-blur">
