@@ -860,12 +860,31 @@ export function Portfolio() {
             </div>
           </motion.div>
 
-          <footer className="mt-16 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+          <footer className="mt-16 grid gap-6 md:grid-cols-3 items-center text-sm text-muted-foreground">
             <div className="font-display italic text-lg text-foreground">
               Meghana<span className="text-lavender-deep">.</span>
+              <div className="not-italic mt-1 text-xs text-muted-foreground">
+                Less noise. More clarity.
+              </div>
+              <div className="not-italic text-xs text-muted-foreground italic">
+                Assumptions are expensive. Research is cheaper.
+              </div>
             </div>
-            <div>Less noise. More clarity. © {new Date().getFullYear()}</div>
-            <div className="flex gap-4">
+            <div className="text-center text-xs">
+              © {new Date().getFullYear()} Meghana Reddy Madi · All rights reserved
+            </div>
+            <div className="flex md:justify-end gap-4">
+              <a
+                className="hover:text-foreground"
+                href="https://www.linkedin.com/in/meghana-reddy-madi/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn ↗
+              </a>
+              <a className="hover:text-foreground" href="mailto:Meghanareddymadi@gmail.com">
+                Email ↗
+              </a>
               <a className="hover:text-foreground" href="#home">Back to top ↑</a>
             </div>
           </footer>
