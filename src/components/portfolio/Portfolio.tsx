@@ -30,7 +30,7 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className={`relative px-6 md:px-10 py-28 md:py-36 ${className}`}>
+    <section id={id} className={`relative px-5 sm:px-8 md:px-10 py-20 md:py-36 ${className}`}>
       {eyebrow && (
         <div className="mb-6 flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
           <span className="h-px w-10 bg-lavender" />
