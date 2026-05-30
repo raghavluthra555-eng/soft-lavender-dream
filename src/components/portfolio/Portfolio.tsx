@@ -12,6 +12,8 @@ import alervio from "@/assets/portfolio/alervio.jpg";
 import aiCreativity from "@/assets/portfolio/ai-creativity.jpg";
 import yoke from "@/assets/portfolio/yoke.jpg";
 import spike from "@/assets/portfolio/spike-safe.jpg";
+import designWall from "@/assets/portfolio/design-wall.jpg";
+import lecture from "@/assets/portfolio/lecture.jpg";
 
 const reveal: Variants = {
   hidden: { opacity: 0, y: 30 },
