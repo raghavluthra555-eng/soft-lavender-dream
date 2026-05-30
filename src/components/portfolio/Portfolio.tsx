@@ -90,6 +90,34 @@ const projects = [
       "Motion-activated retractable spikes paired with sensors and cameras. Conceptual diagrams, user journeys and the visual storytelling for the proposal.",
     year: "2024",
   },
+  {
+    img: collab,
+    cat: "Concept · Community",
+    title: "Liba Space",
+    sub: "A calm digital space for community",
+    body:
+      "A conceptual platform exploring how soft UI, gentle motion and thoughtful information architecture can make online communities feel safer, slower and more human.",
+    year: "2024",
+  },
+];
+
+const focusAreas = [
+  {
+    t: "Product Design",
+    d: "End-to-end UX for apps and platforms — flows, IA, prototypes and polish.",
+  },
+  {
+    t: "Design Systems",
+    d: "Tokens, components and patterns that keep teams shipping consistently.",
+  },
+  {
+    t: "Research & Strategy",
+    d: "Interviews, journeys and empathy maps that turn assumptions into evidence.",
+  },
+  {
+    t: "Visual & Editorial",
+    d: "Typography, rhythm and storytelling that make products feel considered.",
+  },
 ];
 
 const skills = [
@@ -107,6 +135,27 @@ const process = [
   { n: "03", t: "Ideate", d: "Sketch widely, then choose with conviction." },
   { n: "04", t: "Design", d: "Refine the form until it disappears into use." },
   { n: "05", t: "Test & Refine", d: "Iterate with real people, calmly and quickly." },
+];
+
+const experience = [
+  {
+    role: "UI/UX Designer — Freelance & Self-Initiated",
+    org: "Remote",
+    period: "2023 — Present",
+    points: [
+      "Designed apps, websites and concept systems across EdTech, community and safety domains.",
+      "Led research, wireframing, prototyping and visual design end-to-end in Figma.",
+    ],
+  },
+  {
+    role: "Graduate Researcher & Designer",
+    org: "University of New Haven",
+    period: "2024 — 2025",
+    points: [
+      "Built UX frameworks for AI-in-education research projects.",
+      "Facilitated usability studies and synthesized findings into design decisions.",
+    ],
+  },
 ];
 
 const tools = ["Figma", "Adobe XD", "Photoshop", "Illustrator", "Miro", "Notion", "Framer", "Webflow"];
