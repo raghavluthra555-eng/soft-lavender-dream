@@ -650,6 +650,148 @@ export function Portfolio() {
         </div>
       </Section>
 
+      {/* MY STORY */}
+      <Section id="story" eyebrow="My Story" className="bg-section">
+        <div className="mx-auto max-w-7xl grid gap-12 md:grid-cols-12 md:gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.8 }}
+            className="md:col-span-6 relative"
+          >
+            <img
+              src={lecture}
+              alt="Meghana attending a UX community lecture at the University of New Haven"
+              loading="lazy"
+              className="rounded-3xl lavender-glow object-cover w-full aspect-[4/3]"
+            />
+            <img
+              src={designWall}
+              alt="Designers studying a typography wall of editorial posters"
+              loading="lazy"
+              className="absolute -bottom-10 -right-6 w-2/3 rounded-3xl shadow-2xl object-cover aspect-[3/4] hidden md:block"
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="md:col-span-6"
+          >
+            <h2 className="font-display text-[clamp(2rem,5vw,3.8rem)] leading-tight text-balance">
+              From <span className="italic">Public Administration</span> to{" "}
+              <span className="text-lavender-deep">people-centered design</span>.
+            </h2>
+            <p className="mt-6 text-lg text-muted-foreground text-pretty">
+              I started in Public Administration — fascinated by how systems
+              shape everyday life. That curiosity carried me into Information
+              Science at the University of New Haven, where I found design as
+              the most honest way to translate research into things people can
+              actually use.
+            </p>
+            <p className="mt-4 text-lg text-muted-foreground text-pretty">
+              Today I work across apps, educational platforms and concept
+              systems — sitting between research, engineering and craft.
+              I care most about clarity: the kind that comes from listening
+              first and decorating last.
+            </p>
+            <blockquote className="mt-8 rounded-3xl border border-border bg-card/70 p-6 backdrop-blur">
+              <p className="font-display italic text-xl text-lavender-deep">
+                "Less noise. More clarity."
+              </p>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Assumptions are expensive. Research is cheaper.
+              </p>
+            </blockquote>
+          </motion.div>
+        </div>
+      </Section>
+
+      {/* RESUME */}
+      <Section id="resume" eyebrow="Resume">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+            <h2 className="font-display text-[clamp(2rem,5vw,4rem)] leading-tight max-w-2xl text-balance">
+              A short version of a{" "}
+              <span className="italic text-lavender-deep">long curiosity</span>.
+            </h2>
+            <a
+              href="mailto:Meghanareddymadi@gmail.com?subject=Resume%20request"
+              data-cursor="hover"
+              className="inline-flex items-center gap-3 rounded-pill px-7 py-4 text-sm text-white transition-transform duration-300 hover:-translate-y-0.5 self-start md:self-auto"
+              style={{
+                background: "linear-gradient(135deg, var(--lavender), var(--lavender-deep))",
+                boxShadow: "0 20px 50px -15px color-mix(in oklab, var(--lavender-deep) 70%, transparent)",
+              }}
+            >
+              Request full resume
+              <span aria-hidden>→</span>
+            </a>
+          </div>
+
+          <div className="grid gap-10 md:grid-cols-12">
+            <div className="md:col-span-7 space-y-6">
+              <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                Experience
+              </div>
+              {experience.map((e) => (
+                <article
+                  key={e.role}
+                  className="rounded-3xl border border-border bg-card/70 p-6 backdrop-blur hover-lift"
+                >
+                  <div className="flex flex-wrap items-baseline justify-between gap-2">
+                    <h3 className="font-display text-2xl">{e.role}</h3>
+                    <span className="text-xs uppercase tracking-[0.25em] text-lavender-deep">
+                      {e.period}
+                    </span>
+                  </div>
+                  <div className="text-sm text-muted-foreground">{e.org}</div>
+                  <ul className="mt-4 space-y-2 text-sm text-muted-foreground list-disc pl-5">
+                    {e.points.map((p) => (
+                      <li key={p}>{p}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+
+            <div className="md:col-span-5 space-y-6">
+              <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                Education
+              </div>
+              <div className="rounded-3xl border border-border bg-card/70 p-6 backdrop-blur">
+                <h3 className="font-display text-xl">University of New Haven</h3>
+                <p className="text-sm text-muted-foreground">
+                  M.S. Information Science · 2024–2025 · GPA 3.67
+                </p>
+              </div>
+              <div className="rounded-3xl border border-border bg-card/70 p-6 backdrop-blur">
+                <h3 className="font-display text-xl">Osmania University</h3>
+                <p className="text-sm text-muted-foreground">
+                  B.A. Public Administration · 2018–2021 · GPA 3.36
+                </p>
+              </div>
+
+              <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground pt-2">
+                Tools
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {tools.map((t) => (
+                  <span
+                    key={t}
+                    className="rounded-pill border border-border bg-card px-4 py-2 text-sm"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* CONTACT */}
       <Section id="contact" className="bg-section">
         <div className="mx-auto max-w-5xl">
