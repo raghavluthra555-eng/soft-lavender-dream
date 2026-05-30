@@ -222,18 +222,21 @@ export function Portfolio() {
             </div>
 
             <h1 className="font-display text-[clamp(2.6rem,7vw,5.6rem)] leading-[1.02] text-balance">
-              <span className="italic font-light">Crafting</span> meaningful{" "}
+              <span className="italic font-light">Curious</span> about people,{" "}
               <span className="relative inline-block">
-                digital
+                systems
                 <Squiggle className="absolute -bottom-3 left-0 w-full text-lavender-deep" />
               </span>{" "}
-              experiences with empathy & intention.
+              and why some designs just feel easier.
             </h1>
 
             <p className="mt-8 max-w-xl text-lg text-muted-foreground text-pretty">
               I'm <span className="text-foreground">Meghana Reddy Madi</span> — a UI/UX designer
               focused on usability, storytelling and the quiet details that turn
               a product into an experience worth returning to.
+            </p>
+            <p className="mt-4 max-w-xl text-base italic text-lavender-deep">
+              Assumptions are expensive. Research is cheaper.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -246,15 +249,15 @@ export function Portfolio() {
                   boxShadow: "0 20px 50px -15px color-mix(in oklab, var(--lavender-deep) 70%, transparent)",
                 }}
               >
-                View My Work
+                Explore Work
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
               <a
-                href="#about"
+                href="#story"
                 data-cursor="hover"
                 className="inline-flex items-center gap-3 rounded-pill border border-border bg-card/60 px-7 py-4 text-sm backdrop-blur transition-colors hover:bg-lavender-light"
               >
-                About Me
+                My Story
               </a>
             </div>
 
