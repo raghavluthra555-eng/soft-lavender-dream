@@ -12,6 +12,8 @@ import alervio from "@/assets/portfolio/alervio.jpg";
 import aiCreativity from "@/assets/portfolio/ai-creativity.jpg";
 import yoke from "@/assets/portfolio/yoke.jpg";
 import spike from "@/assets/portfolio/spike-safe.jpg";
+import designWall from "@/assets/portfolio/design-wall.jpg";
+import lecture from "@/assets/portfolio/lecture.jpg";
 
 const reveal: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -88,6 +90,34 @@ const projects = [
       "Motion-activated retractable spikes paired with sensors and cameras. Conceptual diagrams, user journeys and the visual storytelling for the proposal.",
     year: "2024",
   },
+  {
+    img: collab,
+    cat: "Concept · Community",
+    title: "Liba Space",
+    sub: "A calm digital space for community",
+    body:
+      "A conceptual platform exploring how soft UI, gentle motion and thoughtful information architecture can make online communities feel safer, slower and more human.",
+    year: "2024",
+  },
+];
+
+const focusAreas = [
+  {
+    t: "Product Design",
+    d: "End-to-end UX for apps and platforms — flows, IA, prototypes and polish.",
+  },
+  {
+    t: "Design Systems",
+    d: "Tokens, components and patterns that keep teams shipping consistently.",
+  },
+  {
+    t: "Research & Strategy",
+    d: "Interviews, journeys and empathy maps that turn assumptions into evidence.",
+  },
+  {
+    t: "Visual & Editorial",
+    d: "Typography, rhythm and storytelling that make products feel considered.",
+  },
 ];
 
 const skills = [
@@ -105,6 +135,27 @@ const process = [
   { n: "03", t: "Ideate", d: "Sketch widely, then choose with conviction." },
   { n: "04", t: "Design", d: "Refine the form until it disappears into use." },
   { n: "05", t: "Test & Refine", d: "Iterate with real people, calmly and quickly." },
+];
+
+const experience = [
+  {
+    role: "UI/UX Designer — Freelance & Self-Initiated",
+    org: "Remote",
+    period: "2023 — Present",
+    points: [
+      "Designed apps, websites and concept systems across EdTech, community and safety domains.",
+      "Led research, wireframing, prototyping and visual design end-to-end in Figma.",
+    ],
+  },
+  {
+    role: "Graduate Researcher & Designer",
+    org: "University of New Haven",
+    period: "2024 — 2025",
+    points: [
+      "Built UX frameworks for AI-in-education research projects.",
+      "Facilitated usability studies and synthesized findings into design decisions.",
+    ],
+  },
 ];
 
 const tools = ["Figma", "Adobe XD", "Photoshop", "Illustrator", "Miro", "Notion", "Framer", "Webflow"];
@@ -128,6 +179,19 @@ export function Portfolio() {
               description:
                 "UI/UX designer crafting meaningful, human-centered digital experiences with empathy, research and editorial craft.",
               url: "https://soft-lavender-dream.lovable.app/",
+              email: "mailto:Meghanareddymadi@gmail.com",
+              telephone: "+1-203-589-9609",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "West Haven",
+                addressRegion: "CT",
+                addressCountry: "USA",
+              },
+              alumniOf: [
+                { "@type": "CollegeOrUniversity", name: "University of New Haven" },
+                { "@type": "CollegeOrUniversity", name: "Osmania University" },
+              ],
+              sameAs: ["https://www.linkedin.com/in/meghana-reddy-madi/"],
             },
             {
               "@context": "https://schema.org",
@@ -171,18 +235,21 @@ export function Portfolio() {
             </div>
 
             <h1 className="font-display text-[clamp(2.6rem,7vw,5.6rem)] leading-[1.02] text-balance">
-              <span className="italic font-light">Crafting</span> meaningful{" "}
+              <span className="italic font-light">Curious</span> about people,{" "}
               <span className="relative inline-block">
-                digital
+                systems
                 <Squiggle className="absolute -bottom-3 left-0 w-full text-lavender-deep" />
               </span>{" "}
-              experiences with empathy & intention.
+              and why some designs just feel easier.
             </h1>
 
             <p className="mt-8 max-w-xl text-lg text-muted-foreground text-pretty">
               I'm <span className="text-foreground">Meghana Reddy Madi</span> — a UI/UX designer
               focused on usability, storytelling and the quiet details that turn
               a product into an experience worth returning to.
+            </p>
+            <p className="mt-4 max-w-xl text-base italic text-lavender-deep">
+              Assumptions are expensive. Research is cheaper.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -195,15 +262,15 @@ export function Portfolio() {
                   boxShadow: "0 20px 50px -15px color-mix(in oklab, var(--lavender-deep) 70%, transparent)",
                 }}
               >
-                View My Work
+                Explore Work
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
               <a
-                href="#about"
+                href="#story"
                 data-cursor="hover"
                 className="inline-flex items-center gap-3 rounded-pill border border-border bg-card/60 px-7 py-4 text-sm backdrop-blur transition-colors hover:bg-lavender-light"
               >
-                About Me
+                My Story
               </a>
             </div>
 
@@ -270,6 +337,38 @@ export function Portfolio() {
                 ),
               ),
             )}
+          </div>
+        </div>
+      </Section>
+
+      {/* FOCUS AREAS */}
+      <Section id="focus" eyebrow="Focus Areas">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+            <h2 className="font-display text-[clamp(2rem,5vw,4rem)] leading-tight max-w-2xl text-balance">
+              Less noise.{" "}
+              <span className="italic text-lavender-deep">More clarity.</span>
+            </h2>
+            <p className="max-w-sm text-muted-foreground">
+              The kinds of problems I love to sit with — and the lenses I bring
+              to each of them.
+            </p>
+          </div>
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {focusAreas.map((f, i) => (
+              <motion.div
+                key={f.t}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.06 }}
+                className="hover-lift rounded-3xl border border-border bg-card p-7"
+              >
+                <Sparkle className="h-5 w-5 text-lavender-deep" />
+                <h3 className="mt-5 font-display text-2xl">{f.t}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{f.d}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </Section>
@@ -564,6 +663,148 @@ export function Portfolio() {
         </div>
       </Section>
 
+      {/* MY STORY */}
+      <Section id="story" eyebrow="My Story" className="bg-section">
+        <div className="mx-auto max-w-7xl grid gap-12 md:grid-cols-12 md:gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.8 }}
+            className="md:col-span-6 relative"
+          >
+            <img
+              src={lecture}
+              alt="Meghana attending a UX community lecture at the University of New Haven"
+              loading="lazy"
+              className="rounded-3xl lavender-glow object-cover w-full aspect-[4/3]"
+            />
+            <img
+              src={designWall}
+              alt="Designers studying a typography wall of editorial posters"
+              loading="lazy"
+              className="absolute -bottom-10 -right-6 w-2/3 rounded-3xl shadow-2xl object-cover aspect-[3/4] hidden md:block"
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="md:col-span-6"
+          >
+            <h2 className="font-display text-[clamp(2rem,5vw,3.8rem)] leading-tight text-balance">
+              From <span className="italic">Public Administration</span> to{" "}
+              <span className="text-lavender-deep">people-centered design</span>.
+            </h2>
+            <p className="mt-6 text-lg text-muted-foreground text-pretty">
+              I started in Public Administration — fascinated by how systems
+              shape everyday life. That curiosity carried me into Information
+              Science at the University of New Haven, where I found design as
+              the most honest way to translate research into things people can
+              actually use.
+            </p>
+            <p className="mt-4 text-lg text-muted-foreground text-pretty">
+              Today I work across apps, educational platforms and concept
+              systems — sitting between research, engineering and craft.
+              I care most about clarity: the kind that comes from listening
+              first and decorating last.
+            </p>
+            <blockquote className="mt-8 rounded-3xl border border-border bg-card/70 p-6 backdrop-blur">
+              <p className="font-display italic text-xl text-lavender-deep">
+                "Less noise. More clarity."
+              </p>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Assumptions are expensive. Research is cheaper.
+              </p>
+            </blockquote>
+          </motion.div>
+        </div>
+      </Section>
+
+      {/* RESUME */}
+      <Section id="resume" eyebrow="Resume">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+            <h2 className="font-display text-[clamp(2rem,5vw,4rem)] leading-tight max-w-2xl text-balance">
+              A short version of a{" "}
+              <span className="italic text-lavender-deep">long curiosity</span>.
+            </h2>
+            <a
+              href="mailto:Meghanareddymadi@gmail.com?subject=Resume%20request"
+              data-cursor="hover"
+              className="inline-flex items-center gap-3 rounded-pill px-7 py-4 text-sm text-white transition-transform duration-300 hover:-translate-y-0.5 self-start md:self-auto"
+              style={{
+                background: "linear-gradient(135deg, var(--lavender), var(--lavender-deep))",
+                boxShadow: "0 20px 50px -15px color-mix(in oklab, var(--lavender-deep) 70%, transparent)",
+              }}
+            >
+              Request full resume
+              <span aria-hidden>→</span>
+            </a>
+          </div>
+
+          <div className="grid gap-10 md:grid-cols-12">
+            <div className="md:col-span-7 space-y-6">
+              <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                Experience
+              </div>
+              {experience.map((e) => (
+                <article
+                  key={e.role}
+                  className="rounded-3xl border border-border bg-card/70 p-6 backdrop-blur hover-lift"
+                >
+                  <div className="flex flex-wrap items-baseline justify-between gap-2">
+                    <h3 className="font-display text-2xl">{e.role}</h3>
+                    <span className="text-xs uppercase tracking-[0.25em] text-lavender-deep">
+                      {e.period}
+                    </span>
+                  </div>
+                  <div className="text-sm text-muted-foreground">{e.org}</div>
+                  <ul className="mt-4 space-y-2 text-sm text-muted-foreground list-disc pl-5">
+                    {e.points.map((p) => (
+                      <li key={p}>{p}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+
+            <div className="md:col-span-5 space-y-6">
+              <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                Education
+              </div>
+              <div className="rounded-3xl border border-border bg-card/70 p-6 backdrop-blur">
+                <h3 className="font-display text-xl">University of New Haven</h3>
+                <p className="text-sm text-muted-foreground">
+                  M.S. Information Science · 2024–2025 · GPA 3.67
+                </p>
+              </div>
+              <div className="rounded-3xl border border-border bg-card/70 p-6 backdrop-blur">
+                <h3 className="font-display text-xl">Osmania University</h3>
+                <p className="text-sm text-muted-foreground">
+                  B.A. Public Administration · 2018–2021 · GPA 3.36
+                </p>
+              </div>
+
+              <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground pt-2">
+                Tools
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {tools.map((t) => (
+                  <span
+                    key={t}
+                    className="rounded-pill border border-border bg-card px-4 py-2 text-sm"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* CONTACT */}
       <Section id="contact" className="bg-section">
         <div className="mx-auto max-w-5xl">
@@ -632,12 +873,31 @@ export function Portfolio() {
             </div>
           </motion.div>
 
-          <footer className="mt-16 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+          <footer className="mt-16 grid gap-6 md:grid-cols-3 items-center text-sm text-muted-foreground">
             <div className="font-display italic text-lg text-foreground">
               Meghana<span className="text-lavender-deep">.</span>
+              <div className="not-italic mt-1 text-xs text-muted-foreground">
+                Less noise. More clarity.
+              </div>
+              <div className="not-italic text-xs text-muted-foreground italic">
+                Assumptions are expensive. Research is cheaper.
+              </div>
             </div>
-            <div>Less noise. More clarity. © {new Date().getFullYear()}</div>
-            <div className="flex gap-4">
+            <div className="text-center text-xs">
+              © {new Date().getFullYear()} Meghana Reddy Madi · All rights reserved
+            </div>
+            <div className="flex md:justify-end gap-4">
+              <a
+                className="hover:text-foreground"
+                href="https://www.linkedin.com/in/meghana-reddy-madi/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn ↗
+              </a>
+              <a className="hover:text-foreground" href="mailto:Meghanareddymadi@gmail.com">
+                Email ↗
+              </a>
               <a className="hover:text-foreground" href="#home">Back to top ↑</a>
             </div>
           </footer>
