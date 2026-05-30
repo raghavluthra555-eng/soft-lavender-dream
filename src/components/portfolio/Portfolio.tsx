@@ -465,7 +465,7 @@ export function Portfolio() {
               src={education}
               alt="Design collaboration"
               loading="lazy"
-              className="rounded-3xl border border-border lavender-glow object-cover w-full aspect-[5/3]"
+              className="rounded-3xl lavender-glow object-cover w-full aspect-[5/3]"
             />
             <div>
               <h3 className="font-display text-3xl md:text-4xl text-balance">
