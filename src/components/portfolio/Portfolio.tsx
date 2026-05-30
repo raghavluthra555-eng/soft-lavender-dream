@@ -365,7 +365,7 @@ export function Portfolio() {
                 className={`group relative ${i % 2 === 1 ? "lg:translate-y-16" : ""}`}
                 data-cursor="hover"
               >
-                <div className="relative overflow-hidden rounded-3xl border border-border bg-card hover-lift">
+                <div className="relative overflow-hidden rounded-3xl bg-card hover-lift">
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
                       src={p.img}
