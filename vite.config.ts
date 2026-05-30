@@ -12,4 +12,13 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  nitro: {
+    prerender: {
+      crawlLinks: false,
+      routes: ["/sitemap.xml", "/robots.txt"],
+    },
+    output: {
+      dir: ".output",
+    },
+  },
 });
