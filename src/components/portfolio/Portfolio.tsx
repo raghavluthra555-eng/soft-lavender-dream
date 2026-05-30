@@ -115,6 +115,7 @@ export function Portfolio() {
 
   return (
     <main className="relative">
+      <Intro />
       <LavenderCursor />
       <Navbar />
 
