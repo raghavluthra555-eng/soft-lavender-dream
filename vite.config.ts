@@ -13,10 +13,6 @@ export default defineConfig({
     server: { entry: "server" },
   },
   nitro: {
-    prerender: {
-      crawlLinks: false,
-      routes: ["/sitemap.xml", "/robots.txt"],
-    },
     output: {
       dir: ".output",
     },
