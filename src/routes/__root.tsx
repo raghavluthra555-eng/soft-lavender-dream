@@ -84,6 +84,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "Portfolio of Meghana Reddy Madi — UI/UX Designer." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "Meghana Reddy Madi — UI/UX Designer" },
+      { name: "twitter:description", content: "Portfolio of Meghana Reddy Madi — UI/UX Designer." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a7a4970f-4424-4877-9fe8-fcc6c27afe00/id-preview-fb7c6222--01637bb4-21b9-4320-bb4e-8c810e079f4a.lovable.app-1780174263595.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a7a4970f-4424-4877-9fe8-fcc6c27afe00/id-preview-fb7c6222--01637bb4-21b9-4320-bb4e-8c810e079f4a.lovable.app-1780174263595.png" },
     ],
     links: [
       {
