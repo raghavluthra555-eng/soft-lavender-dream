@@ -32,10 +32,10 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className={`relative px-5 sm:px-8 md:px-10 py-20 md:py-36 ${className}`}>
+    <section id={id} className={`relative px-5 sm:px-8 md:px-10 py-16 md:py-36 ${className}`}>
       {eyebrow && (
-        <div className="mb-6 flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
-          <span className="h-px w-10 bg-lavender" />
+        <div className="mb-5 md:mb-6 flex items-center gap-3 text-[10px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-muted-foreground">
+          <span className="h-px w-8 md:w-10 bg-lavender" />
           {eyebrow}
         </div>
       )}
@@ -43,6 +43,7 @@ function Section({
     </section>
   );
 }
+
 
 const projects = [
   {
