@@ -222,36 +222,37 @@ export function Portfolio() {
       <Leaf className="pointer-events-none fixed bottom-24 -right-10 w-40 text-lavender-deep/30 animate-sway" />
 
       {/* HERO */}
-      <Section id="home" className="pt-32 md:pt-48">
-        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-12 md:gap-16 items-center">
+      <Section id="home" className="pt-28 md:pt-48">
+        <div className="mx-auto grid max-w-7xl gap-10 md:gap-16 md:grid-cols-12 items-center">
           <motion.div
             initial="hidden"
             animate="show"
             variants={reveal}
-            className="md:col-span-7 relative"
+            className="md:col-span-7 relative order-2 md:order-1"
           >
-            <div className="mb-6 flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
-              <Sparkle className="h-3 w-3 text-lavender-deep" />
-              UI / UX Designer · Portfolio 2025
+            <div className="mb-5 flex items-center gap-3 text-[10px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-muted-foreground">
+              <Sparkle className="h-3 w-3 text-lavender-deep shrink-0" />
+              <span>UI / UX Designer · Portfolio 2025</span>
             </div>
 
-            <h1 className="font-display text-[clamp(2.6rem,7vw,5.6rem)] leading-[1.02] text-balance">
+            <h1 className="font-display text-[clamp(2.1rem,8.5vw,5.6rem)] leading-[1.05] md:leading-[1.02] text-balance">
               <span className="italic font-light">Curious</span> about people,{" "}
               <span className="relative inline-block">
                 systems
-                <Squiggle className="absolute -bottom-3 left-0 w-full text-lavender-deep" />
+                <Squiggle className="absolute -bottom-2 md:-bottom-3 left-0 w-full text-lavender-deep" />
               </span>{" "}
               and why some designs just feel easier.
             </h1>
 
-            <p className="mt-8 max-w-xl text-lg text-muted-foreground text-pretty">
+            <p className="mt-6 md:mt-8 max-w-xl text-base md:text-lg text-muted-foreground text-pretty">
               I'm <span className="text-foreground">Meghana Reddy Madi</span> — a UI/UX designer
               focused on usability, storytelling and the quiet details that turn
               a product into an experience worth returning to.
             </p>
-            <p className="mt-4 max-w-xl text-base italic text-lavender-deep">
+            <p className="mt-4 max-w-xl text-sm md:text-base italic text-lavender-deep">
               Assumptions are expensive. Research is cheaper.
             </p>
+
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
