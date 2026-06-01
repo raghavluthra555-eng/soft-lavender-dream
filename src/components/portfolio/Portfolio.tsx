@@ -818,16 +818,17 @@ export function Portfolio() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9 }}
-            className="relative overflow-hidden rounded-[3rem] border border-border p-10 md:p-20 text-center"
+            className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem] border border-border p-8 md:p-20 text-center"
             style={{
               background:
                 "linear-gradient(135deg, color-mix(in oklab, var(--lavender-light) 80%, white), color-mix(in oklab, var(--pink-soft) 60%, white))",
             }}
           >
-            <CircleOrbit className="absolute -top-20 -left-20 w-72 text-lavender/40" />
-            <CircleOrbit className="absolute -bottom-24 -right-16 w-80 text-lavender-deep/30" />
-            <Sparkle className="absolute top-10 right-12 h-6 w-6 text-lavender-deep animate-float-slow" />
-            <Leaf className="absolute bottom-10 left-10 w-16 text-lavender-deep/60 animate-sway" />
+            <CircleOrbit className="absolute -top-20 -left-20 w-56 md:w-72 text-lavender/40" />
+            <CircleOrbit className="absolute -bottom-24 -right-16 w-64 md:w-80 text-lavender-deep/30" />
+            <Sparkle className="absolute top-6 right-6 md:top-10 md:right-12 h-5 w-5 md:h-6 md:w-6 text-lavender-deep animate-float-slow" />
+            <Leaf className="absolute bottom-6 left-6 md:bottom-10 md:left-10 w-12 md:w-16 text-lavender-deep/60 animate-sway" />
+
 
             <div className="relative">
               <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
