@@ -254,11 +254,11 @@ export function Portfolio() {
             </p>
 
 
-            <div className="mt-10 flex flex-wrap items-center gap-4">
+            <div className="mt-8 md:mt-10 flex flex-wrap items-center gap-3 md:gap-4">
               <a
                 href="#projects"
                 data-cursor="hover"
-                className="group relative inline-flex items-center gap-3 rounded-pill px-7 py-4 text-sm text-white transition-transform duration-300 hover:-translate-y-0.5"
+                className="group relative inline-flex items-center gap-3 rounded-pill px-6 md:px-7 py-3.5 md:py-4 text-sm text-white transition-transform duration-300 hover:-translate-y-0.5"
                 style={{
                   background: "linear-gradient(135deg, var(--lavender), var(--lavender-deep))",
                   boxShadow: "0 20px 50px -15px color-mix(in oklab, var(--lavender-deep) 70%, transparent)",
@@ -270,21 +270,21 @@ export function Portfolio() {
               <a
                 href="#story"
                 data-cursor="hover"
-                className="inline-flex items-center gap-3 rounded-pill border border-border bg-card/60 px-7 py-4 text-sm backdrop-blur transition-colors hover:bg-lavender-light"
+                className="inline-flex items-center gap-3 rounded-pill border border-border bg-card/60 px-6 md:px-7 py-3.5 md:py-4 text-sm backdrop-blur transition-colors hover:bg-lavender-light"
               >
                 My Story
               </a>
             </div>
 
-            <div className="mt-16 grid max-w-xl grid-cols-3 gap-6 text-sm">
+            <div className="mt-12 md:mt-16 grid max-w-xl grid-cols-3 gap-3 md:gap-6 text-sm">
               {[
-                ["6+", "Projects shipped"],
-                ["MS", "Information Science"],
-                ["CT", "Based in USA"],
+                ["6+", "Projects"],
+                ["MS", "Info. Science"],
+                ["CT", "USA"],
               ].map(([n, l]) => (
-                <div key={l} className="rounded-2xl border border-border bg-card/50 p-4">
-                  <div className="font-display text-3xl text-lavender-deep">{n}</div>
-                  <div className="mt-1 text-muted-foreground">{l}</div>
+                <div key={l} className="rounded-2xl border border-border bg-card/50 p-3 md:p-4 text-center md:text-left">
+                  <div className="font-display text-2xl md:text-3xl text-lavender-deep">{n}</div>
+                  <div className="mt-1 text-[11px] md:text-sm text-muted-foreground">{l}</div>
                 </div>
               ))}
             </div>
@@ -294,8 +294,9 @@ export function Portfolio() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.1, ease: [0.2, 0.7, 0.2, 1] }}
-            className="md:col-span-5 relative mx-auto w-full max-w-md"
+            className="md:col-span-5 relative mx-auto w-full max-w-[280px] md:max-w-md order-1 md:order-2"
           >
+
             <CircleOrbit className="absolute -inset-10 text-lavender/30 animate-[spin_60s_linear_infinite]" />
 
             <div className="relative animate-float-slow">
