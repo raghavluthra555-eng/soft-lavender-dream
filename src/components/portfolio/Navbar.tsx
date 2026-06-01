@@ -88,13 +88,14 @@ export function Navbar() {
 
         <button
           aria-label="Menu"
-          className="md:hidden rounded-pill p-2 px-3"
+          className="md:hidden rounded-pill p-2.5 px-3.5 shrink-0 hover:bg-lavender-light/60 transition-colors"
           onClick={() => setOpen((v) => !v)}
         >
           <span className="block h-px w-5 bg-foreground" />
           <span className="mt-1.5 block h-px w-5 bg-foreground" />
-          <span className="mt-1.5 block h-px w-3 bg-foreground" />
+          <span className="mt-1.5 block h-px w-3 bg-foreground ml-auto" />
         </button>
+
       </div>
 
       {open && (
