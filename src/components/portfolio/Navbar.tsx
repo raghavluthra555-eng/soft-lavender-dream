@@ -35,17 +35,18 @@ export function Navbar() {
       initial={{ y: -30, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.9, ease: [0.2, 0.7, 0.2, 1] }}
-      className="fixed top-4 left-1/2 z-50 -translate-x-1/2 w-[min(96%,1080px)]"
+      className="fixed top-3 left-1/2 z-50 -translate-x-1/2 w-[calc(100%-1.25rem)] md:w-[min(96%,1080px)] max-w-[1080px]"
     >
-      <div className="glass rounded-pill px-3 py-2 flex items-center justify-between lavender-glow">
-        <a href="#home" className="flex items-center gap-2 pl-3 pr-2">
+      <div className="glass rounded-pill px-2 py-1.5 md:px-3 md:py-2 flex items-center justify-between lavender-glow">
+        <a href="#home" className="flex items-center gap-2 pl-2 md:pl-3 pr-1 md:pr-2 shrink-0">
           <span
-            className="font-display text-lg tracking-tight"
+            className="font-display text-base md:text-lg tracking-tight"
             style={{ fontStyle: "italic" }}
           >
             Meghana<span className="text-lavender-deep">.</span>
           </span>
         </a>
+
 
         <ul className="hidden md:flex items-center gap-1">
           {items.map((it) => {
@@ -87,13 +88,14 @@ export function Navbar() {
 
         <button
           aria-label="Menu"
-          className="md:hidden rounded-pill p-2 px-3"
+          className="md:hidden rounded-pill p-2.5 px-3.5 shrink-0 hover:bg-lavender-light/60 transition-colors"
           onClick={() => setOpen((v) => !v)}
         >
           <span className="block h-px w-5 bg-foreground" />
           <span className="mt-1.5 block h-px w-5 bg-foreground" />
-          <span className="mt-1.5 block h-px w-3 bg-foreground" />
+          <span className="mt-1.5 block h-px w-3 bg-foreground ml-auto" />
         </button>
+
       </div>
 
       {open && (

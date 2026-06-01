@@ -32,10 +32,10 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className={`relative px-5 sm:px-8 md:px-10 py-20 md:py-36 ${className}`}>
+    <section id={id} className={`relative px-5 sm:px-8 md:px-10 py-16 md:py-36 ${className}`}>
       {eyebrow && (
-        <div className="mb-6 flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
-          <span className="h-px w-10 bg-lavender" />
+        <div className="mb-5 md:mb-6 flex items-center gap-3 text-[10px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-muted-foreground">
+          <span className="h-px w-8 md:w-10 bg-lavender" />
           {eyebrow}
         </div>
       )}
@@ -43,6 +43,7 @@ function Section({
     </section>
   );
 }
+
 
 const projects = [
   {
@@ -216,47 +217,49 @@ export function Portfolio() {
         }} />
       </motion.div>
 
-      {/* Floating decor */}
-      <Leaf className="pointer-events-none fixed top-32 -left-6 w-32 text-lavender/40 animate-sway" />
-      <Leaf className="pointer-events-none fixed bottom-24 -right-10 w-40 text-lavender-deep/30 animate-sway" />
+      {/* Floating decor — hidden on mobile to prevent overflow */}
+      <Leaf className="pointer-events-none hidden md:block fixed top-32 -left-6 w-32 text-lavender/40 animate-sway" />
+      <Leaf className="pointer-events-none hidden md:block fixed bottom-24 -right-10 w-40 text-lavender-deep/30 animate-sway" />
+
 
       {/* HERO */}
-      <Section id="home" className="pt-32 md:pt-48">
-        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-12 md:gap-16 items-center">
+      <Section id="home" className="pt-28 md:pt-48">
+        <div className="mx-auto grid max-w-7xl gap-10 md:gap-16 md:grid-cols-12 items-center">
           <motion.div
             initial="hidden"
             animate="show"
             variants={reveal}
-            className="md:col-span-7 relative"
+            className="md:col-span-7 relative order-2 md:order-1"
           >
-            <div className="mb-6 flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
-              <Sparkle className="h-3 w-3 text-lavender-deep" />
-              UI / UX Designer · Portfolio 2025
+            <div className="mb-5 flex items-center gap-3 text-[10px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-muted-foreground">
+              <Sparkle className="h-3 w-3 text-lavender-deep shrink-0" />
+              <span>UI / UX Designer · Portfolio 2025</span>
             </div>
 
-            <h1 className="font-display text-[clamp(2.6rem,7vw,5.6rem)] leading-[1.02] text-balance">
+            <h1 className="font-display text-[clamp(2.1rem,8.5vw,5.6rem)] leading-[1.05] md:leading-[1.02] text-balance">
               <span className="italic font-light">Curious</span> about people,{" "}
               <span className="relative inline-block">
                 systems
-                <Squiggle className="absolute -bottom-3 left-0 w-full text-lavender-deep" />
+                <Squiggle className="absolute -bottom-2 md:-bottom-3 left-0 w-full text-lavender-deep" />
               </span>{" "}
               and why some designs just feel easier.
             </h1>
 
-            <p className="mt-8 max-w-xl text-lg text-muted-foreground text-pretty">
+            <p className="mt-6 md:mt-8 max-w-xl text-base md:text-lg text-muted-foreground text-pretty">
               I'm <span className="text-foreground">Meghana Reddy Madi</span> — a UI/UX designer
               focused on usability, storytelling and the quiet details that turn
               a product into an experience worth returning to.
             </p>
-            <p className="mt-4 max-w-xl text-base italic text-lavender-deep">
+            <p className="mt-4 max-w-xl text-sm md:text-base italic text-lavender-deep">
               Assumptions are expensive. Research is cheaper.
             </p>
 
-            <div className="mt-10 flex flex-wrap items-center gap-4">
+
+            <div className="mt-8 md:mt-10 flex flex-wrap items-center gap-3 md:gap-4">
               <a
                 href="#projects"
                 data-cursor="hover"
-                className="group relative inline-flex items-center gap-3 rounded-pill px-7 py-4 text-sm text-white transition-transform duration-300 hover:-translate-y-0.5"
+                className="group relative inline-flex items-center gap-3 rounded-pill px-6 md:px-7 py-3.5 md:py-4 text-sm text-white transition-transform duration-300 hover:-translate-y-0.5"
                 style={{
                   background: "linear-gradient(135deg, var(--lavender), var(--lavender-deep))",
                   boxShadow: "0 20px 50px -15px color-mix(in oklab, var(--lavender-deep) 70%, transparent)",
@@ -268,21 +271,21 @@ export function Portfolio() {
               <a
                 href="#story"
                 data-cursor="hover"
-                className="inline-flex items-center gap-3 rounded-pill border border-border bg-card/60 px-7 py-4 text-sm backdrop-blur transition-colors hover:bg-lavender-light"
+                className="inline-flex items-center gap-3 rounded-pill border border-border bg-card/60 px-6 md:px-7 py-3.5 md:py-4 text-sm backdrop-blur transition-colors hover:bg-lavender-light"
               >
                 My Story
               </a>
             </div>
 
-            <div className="mt-16 grid max-w-xl grid-cols-3 gap-6 text-sm">
+            <div className="mt-12 md:mt-16 grid max-w-xl grid-cols-3 gap-3 md:gap-6 text-sm">
               {[
-                ["6+", "Projects shipped"],
-                ["MS", "Information Science"],
-                ["CT", "Based in USA"],
+                ["6+", "Projects"],
+                ["MS", "Info. Science"],
+                ["CT", "USA"],
               ].map(([n, l]) => (
-                <div key={l} className="rounded-2xl border border-border bg-card/50 p-4">
-                  <div className="font-display text-3xl text-lavender-deep">{n}</div>
-                  <div className="mt-1 text-muted-foreground">{l}</div>
+                <div key={l} className="rounded-2xl border border-border bg-card/50 p-3 md:p-4 text-center md:text-left">
+                  <div className="font-display text-2xl md:text-3xl text-lavender-deep">{n}</div>
+                  <div className="mt-1 text-[11px] md:text-sm text-muted-foreground">{l}</div>
                 </div>
               ))}
             </div>
@@ -292,8 +295,9 @@ export function Portfolio() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.1, ease: [0.2, 0.7, 0.2, 1] }}
-            className="md:col-span-5 relative mx-auto w-full max-w-md"
+            className="md:col-span-5 relative mx-auto w-full max-w-[280px] md:max-w-md order-1 md:order-2"
           >
+
             <CircleOrbit className="absolute -inset-10 text-lavender/30 animate-[spin_60s_linear_infinite]" />
 
             <div className="relative animate-float-slow">
@@ -326,8 +330,8 @@ export function Portfolio() {
         </div>
 
         {/* Marquee */}
-        <div className="relative mt-28 overflow-hidden border-y border-border/60 py-6">
-          <div className="marquee flex gap-16 whitespace-nowrap font-display text-2xl text-muted-foreground/70">
+        <div className="relative mt-20 md:mt-28 overflow-hidden border-y border-border/60 py-5 md:py-6">
+          <div className="marquee flex gap-10 md:gap-16 whitespace-nowrap font-display text-xl md:text-2xl text-muted-foreground/70">
             {[...Array(2)].flatMap((_, k) =>
               ["Empathy", "✦", "Usability", "✦", "Story", "✦", "Systems", "✦", "Craft", "✦", "Calm", "✦"].map(
                 (w, i) => (
@@ -339,6 +343,7 @@ export function Portfolio() {
             )}
           </div>
         </div>
+
       </Section>
 
       {/* FOCUS AREAS */}
@@ -813,16 +818,17 @@ export function Portfolio() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9 }}
-            className="relative overflow-hidden rounded-[3rem] border border-border p-10 md:p-20 text-center"
+            className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem] border border-border p-8 md:p-20 text-center"
             style={{
               background:
                 "linear-gradient(135deg, color-mix(in oklab, var(--lavender-light) 80%, white), color-mix(in oklab, var(--pink-soft) 60%, white))",
             }}
           >
-            <CircleOrbit className="absolute -top-20 -left-20 w-72 text-lavender/40" />
-            <CircleOrbit className="absolute -bottom-24 -right-16 w-80 text-lavender-deep/30" />
-            <Sparkle className="absolute top-10 right-12 h-6 w-6 text-lavender-deep animate-float-slow" />
-            <Leaf className="absolute bottom-10 left-10 w-16 text-lavender-deep/60 animate-sway" />
+            <CircleOrbit className="absolute -top-20 -left-20 w-56 md:w-72 text-lavender/40" />
+            <CircleOrbit className="absolute -bottom-24 -right-16 w-64 md:w-80 text-lavender-deep/30" />
+            <Sparkle className="absolute top-6 right-6 md:top-10 md:right-12 h-5 w-5 md:h-6 md:w-6 text-lavender-deep animate-float-slow" />
+            <Leaf className="absolute bottom-6 left-6 md:bottom-10 md:left-10 w-12 md:w-16 text-lavender-deep/60 animate-sway" />
+
 
             <div className="relative">
               <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
@@ -873,7 +879,7 @@ export function Portfolio() {
             </div>
           </motion.div>
 
-          <footer className="mt-16 grid gap-6 md:grid-cols-3 items-center text-sm text-muted-foreground">
+          <footer className="mt-12 md:mt-16 flex flex-col md:grid md:grid-cols-3 gap-6 items-center text-sm text-muted-foreground text-center md:text-left">
             <div className="font-display italic text-lg text-foreground">
               Meghana<span className="text-lavender-deep">.</span>
               <div className="not-italic mt-1 text-xs text-muted-foreground">
@@ -883,10 +889,10 @@ export function Portfolio() {
                 Assumptions are expensive. Research is cheaper.
               </div>
             </div>
-            <div className="text-center text-xs">
+            <div className="text-center text-xs order-3 md:order-2">
               © {new Date().getFullYear()} Meghana Reddy Madi · All rights reserved
             </div>
-            <div className="flex md:justify-end gap-4">
+            <div className="flex justify-center md:justify-end gap-4 order-2 md:order-3">
               <a
                 className="hover:text-foreground"
                 href="https://www.linkedin.com/in/meghana-reddy-madi/"
@@ -901,6 +907,7 @@ export function Portfolio() {
               <a className="hover:text-foreground" href="#home">Back to top ↑</a>
             </div>
           </footer>
+
         </div>
       </Section>
     </main>
