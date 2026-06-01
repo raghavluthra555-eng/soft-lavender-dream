@@ -879,7 +879,7 @@ export function Portfolio() {
             </div>
           </motion.div>
 
-          <footer className="mt-16 grid gap-6 md:grid-cols-3 items-center text-sm text-muted-foreground">
+          <footer className="mt-12 md:mt-16 flex flex-col md:grid md:grid-cols-3 gap-6 items-center text-sm text-muted-foreground text-center md:text-left">
             <div className="font-display italic text-lg text-foreground">
               Meghana<span className="text-lavender-deep">.</span>
               <div className="not-italic mt-1 text-xs text-muted-foreground">
@@ -889,10 +889,10 @@ export function Portfolio() {
                 Assumptions are expensive. Research is cheaper.
               </div>
             </div>
-            <div className="text-center text-xs">
+            <div className="text-center text-xs order-3 md:order-2">
               © {new Date().getFullYear()} Meghana Reddy Madi · All rights reserved
             </div>
-            <div className="flex md:justify-end gap-4">
+            <div className="flex justify-center md:justify-end gap-4 order-2 md:order-3">
               <a
                 className="hover:text-foreground"
                 href="https://www.linkedin.com/in/meghana-reddy-madi/"
@@ -907,6 +907,7 @@ export function Portfolio() {
               <a className="hover:text-foreground" href="#home">Back to top ↑</a>
             </div>
           </footer>
+
         </div>
       </Section>
     </main>
