@@ -217,9 +217,10 @@ export function Portfolio() {
         }} />
       </motion.div>
 
-      {/* Floating decor */}
-      <Leaf className="pointer-events-none fixed top-32 -left-6 w-32 text-lavender/40 animate-sway" />
-      <Leaf className="pointer-events-none fixed bottom-24 -right-10 w-40 text-lavender-deep/30 animate-sway" />
+      {/* Floating decor — hidden on mobile to prevent overflow */}
+      <Leaf className="pointer-events-none hidden md:block fixed top-32 -left-6 w-32 text-lavender/40 animate-sway" />
+      <Leaf className="pointer-events-none hidden md:block fixed bottom-24 -right-10 w-40 text-lavender-deep/30 animate-sway" />
+
 
       {/* HERO */}
       <Section id="home" className="pt-28 md:pt-48">
