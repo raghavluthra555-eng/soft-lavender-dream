@@ -121,13 +121,14 @@ export function Intro() {
                   UI · UX · Designer
                 </motion.div>
                 <div
-                  className="font-display italic text-[clamp(2.8rem,10vw,6rem)] leading-none"
+                  className="font-display italic text-[clamp(2.2rem,8vw,5rem)] leading-[1.15] tracking-tight px-6 pb-2"
                   style={{
                     backgroundImage:
                       "linear-gradient(135deg, var(--foreground), var(--lavender-deep))",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
+                    overflow: "visible",
                   }}
                 >
                   Meghana<span className="text-lavender-deep not-italic">.</span>

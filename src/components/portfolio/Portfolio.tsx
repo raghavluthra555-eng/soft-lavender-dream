@@ -279,7 +279,7 @@ export function Portfolio() {
 
             <div className="mt-12 md:mt-16 grid max-w-xl grid-cols-3 gap-3 md:gap-6 text-sm">
               {[
-                ["6+", "Projects"],
+                ["20+", "Projects"],
                 ["MS", "Info. Science"],
                 ["CT", "USA"],
               ].map(([n, l]) => (
@@ -333,7 +333,7 @@ export function Portfolio() {
         <div className="relative mt-20 md:mt-28 overflow-hidden border-y border-border/60 py-5 md:py-6">
           <div className="marquee flex gap-10 md:gap-16 whitespace-nowrap font-display text-xl md:text-2xl text-muted-foreground/70">
             {[...Array(2)].flatMap((_, k) =>
-              ["Empathy", "✦", "Usability", "✦", "Story", "✦", "Systems", "✦", "Craft", "✦", "Calm", "✦"].map(
+              ["UI Design", "✦", "UX Research", "✦", "Wireframing", "✦", "Prototyping", "✦", "Design Systems", "✦", "Interaction Design", "✦", "Usability Testing", "✦", "Visual Design", "✦"].map(
                 (w, i) => (
                   <span key={`${k}-${i}`} className="italic">
                     {w}
