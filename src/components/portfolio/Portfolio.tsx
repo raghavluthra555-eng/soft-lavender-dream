@@ -812,13 +812,13 @@ export function Portfolio() {
 
       {/* CONTACT */}
       <Section id="contact" className="bg-section">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9 }}
-            className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem] border border-border p-8 md:p-20 text-center"
+            className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem] border border-border p-8 md:p-16"
             style={{
               background:
                 "linear-gradient(135deg, color-mix(in oklab, var(--lavender-light) 80%, white), color-mix(in oklab, var(--pink-soft) 60%, white))",
@@ -829,52 +829,77 @@ export function Portfolio() {
             <Sparkle className="absolute top-6 right-6 md:top-10 md:right-12 h-5 w-5 md:h-6 md:w-6 text-lavender-deep animate-float-slow" />
             <Leaf className="absolute bottom-6 left-6 md:bottom-10 md:left-10 w-12 md:w-16 text-lavender-deep/60 animate-sway" />
 
+            <div className="relative grid gap-10 md:grid-cols-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.92 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, ease: [0.2, 0.7, 0.2, 1] }}
+                className="md:col-span-5 order-2 md:order-1 mx-auto w-full max-w-sm"
+                aria-hidden
+              >
+                <CollabScene />
+              </motion.div>
 
-            <div className="relative">
-              <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                Let's collaborate
+              <div className="md:col-span-7 order-1 md:order-2 text-center md:text-left">
+                <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                  Let's collaborate
+                </div>
+                <h2 className="mt-5 font-display text-[clamp(2rem,5.2vw,4rem)] leading-[1.05] text-balance">
+                  Let's create something{" "}
+                  <span className="italic text-lavender-deep">amazing</span> together.
+                </h2>
+                <p className="mt-5 max-w-xl mx-auto md:mx-0 text-base md:text-lg text-muted-foreground text-pretty">
+                  Whether it's a product redesign, a brand-new app, or a quiet
+                  refinement — I'd love to hear what you're working on.
+                </p>
+                <a
+                  href="mailto:Meghanareddymadi@gmail.com"
+                  data-cursor="hover"
+                  className="mt-8 inline-flex items-center gap-3 rounded-pill px-8 py-4 text-base text-white transition-transform duration-300 hover:-translate-y-1"
+                  style={{
+                    background: "linear-gradient(135deg, var(--lavender), var(--lavender-deep))",
+                    boxShadow: "0 25px 60px -20px color-mix(in oklab, var(--lavender-deep) 70%, transparent)",
+                  }}
+                >
+                  Say hello
+                  <span aria-hidden>→</span>
+                </a>
               </div>
-              <h2 className="mt-6 font-display text-[clamp(2.2rem,6vw,4.8rem)] leading-[1.05] text-balance">
-                Let's create something{" "}
-                <span className="italic">amazing</span> together.
-              </h2>
-              <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground text-pretty">
-                Whether it's a product redesign, a brand-new app, or a quiet refinement —
-                I'd love to hear what you're working on.
-              </p>
+            </div>
 
+            {/* Contact tiles — email wider for uniformity */}
+            <div className="relative mt-12 grid gap-4 md:grid-cols-4 text-sm">
               <a
                 href="mailto:Meghanareddymadi@gmail.com"
-                data-cursor="hover"
-                className="mt-10 inline-flex items-center gap-3 rounded-pill px-9 py-5 text-base text-white transition-transform duration-300 hover:-translate-y-1"
-                style={{
-                  background: "linear-gradient(135deg, var(--lavender), var(--lavender-deep))",
-                  boxShadow: "0 25px 60px -20px color-mix(in oklab, var(--lavender-deep) 70%, transparent)",
-                }}
+                className="md:col-span-2 group rounded-2xl border border-border bg-card/80 p-5 backdrop-blur hover-lift flex items-center gap-4 min-w-0"
               >
-                Say hello
-                <span aria-hidden>→</span>
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-lavender-light text-lavender-deep">✉</span>
+                <span className="min-w-0 flex-1">
+                  <span className="block text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Email</span>
+                  <span className="mt-1 block font-display text-base md:text-lg truncate group-hover:text-lavender-deep">
+                    Meghanareddymadi@gmail.com
+                  </span>
+                </span>
               </a>
-
-              <div className="mt-12 grid gap-6 md:grid-cols-3 text-sm">
-                {[
-                  ["Email", "Meghanareddymadi@gmail.com", "mailto:Meghanareddymadi@gmail.com"],
-                  ["Phone", "+1 (203) 589-9609", "tel:+12035899609"],
-                  ["Location", "West Haven, CT", null],
-                ].map(([k, v, href]) => (
-                  <div key={k as string} className="rounded-2xl border border-border bg-card/70 p-5 backdrop-blur">
-                    <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-                      {k}
-                    </div>
-                    {href ? (
-                      <a href={href as string} className="mt-2 block font-display text-lg hover:text-lavender-deep">
-                        {v}
-                      </a>
-                    ) : (
-                      <div className="mt-2 font-display text-lg">{v}</div>
-                    )}
-                  </div>
-                ))}
+              <a
+                href="tel:+12035899609"
+                className="group rounded-2xl border border-border bg-card/80 p-5 backdrop-blur hover-lift flex items-center gap-4"
+              >
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-lavender-light text-lavender-deep">☏</span>
+                <span>
+                  <span className="block text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Phone</span>
+                  <span className="mt-1 block font-display text-base md:text-lg group-hover:text-lavender-deep">
+                    +1 (203) 589-9609
+                  </span>
+                </span>
+              </a>
+              <div className="rounded-2xl border border-border bg-card/80 p-5 backdrop-blur flex items-center gap-4">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-lavender-light text-lavender-deep">◎</span>
+                <span>
+                  <span className="block text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Location</span>
+                  <span className="mt-1 block font-display text-base md:text-lg">West Haven, CT</span>
+                </span>
               </div>
             </div>
           </motion.div>
@@ -885,7 +910,7 @@ export function Portfolio() {
               <div className="not-italic mt-1 text-xs text-muted-foreground">
                 Less noise. More clarity.
               </div>
-              <div className="not-italic text-xs text-muted-foreground italic">
+              <div className="not-italic text-xs italic text-muted-foreground">
                 Assumptions are expensive. Research is cheaper.
               </div>
             </div>
@@ -911,5 +936,76 @@ export function Portfolio() {
         </div>
       </Section>
     </main>
+  );
+}
+
+/* Animated "let's collaborate" scene */
+function CollabScene() {
+  return (
+    <div className="relative aspect-square w-full">
+      <div
+        className="absolute inset-4 rounded-[42%_58%_46%_54%/55%_45%_55%_45%] blur-2xl"
+        style={{
+          background:
+            "conic-gradient(from 120deg, var(--lavender-light), var(--pink-soft), var(--lavender), var(--lavender-light))",
+          opacity: 0.75,
+        }}
+      />
+      <motion.svg
+        viewBox="0 0 200 200"
+        className="absolute inset-0 h-full w-full text-lavender-deep/40"
+        animate={{ rotate: 360 }}
+        transition={{ duration: 50, ease: "linear", repeat: Infinity }}
+      >
+        <circle cx="100" cy="100" r="86" fill="none" stroke="currentColor" strokeDasharray="2 8" />
+        <circle cx="100" cy="100" r="64" fill="none" stroke="currentColor" strokeDasharray="1 6" opacity="0.6" />
+      </motion.svg>
+
+      <motion.div
+        initial={{ y: 8 }}
+        animate={{ y: -8 }}
+        transition={{ duration: 4, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+        className="absolute left-1/2 top-1/2 w-[70%] -translate-x-1/2 -translate-y-1/2"
+      >
+        <div
+          className="rounded-2xl border border-border bg-card p-5"
+          style={{ boxShadow: "0 30px 60px -20px color-mix(in oklab, var(--lavender-deep) 50%, transparent)" }}
+        >
+          <div className="flex items-center gap-1.5">
+            <span className="h-2 w-2 rounded-full bg-lavender-deep/60" />
+            <span className="h-2 w-2 rounded-full bg-lavender/70" />
+            <span className="h-2 w-2 rounded-full bg-pink-soft" />
+          </div>
+          <div className="mt-4 font-display italic text-2xl leading-tight">
+            Let's<br />
+            <span className="text-lavender-deep">Connect!</span>
+          </div>
+          <div className="mt-3 h-1.5 w-2/3 rounded-full bg-lavender-light" />
+          <div className="mt-1.5 h-1.5 w-1/2 rounded-full bg-lavender-light/70" />
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="absolute top-4 right-6 text-lavender-deep"
+        animate={{ y: [0, -8, 0], rotate: [0, 12, 0] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <Sparkle className="h-5 w-5" />
+      </motion.div>
+      <motion.div
+        className="absolute bottom-6 left-4 text-lavender"
+        animate={{ y: [0, 6, 0], rotate: [0, -10, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <Sparkle className="h-4 w-4" />
+      </motion.div>
+      <motion.div
+        className="absolute bottom-10 right-8"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <Leaf className="w-10 text-lavender-deep/70" />
+      </motion.div>
+    </div>
   );
 }
