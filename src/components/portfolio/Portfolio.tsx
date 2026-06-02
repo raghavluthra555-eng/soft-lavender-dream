@@ -279,7 +279,7 @@ export function Portfolio() {
 
             <div className="mt-12 md:mt-16 grid max-w-xl grid-cols-3 gap-3 md:gap-6 text-sm">
               {[
-                ["6+", "Projects"],
+                ["20+", "Projects"],
                 ["MS", "Info. Science"],
                 ["CT", "USA"],
               ].map(([n, l]) => (
