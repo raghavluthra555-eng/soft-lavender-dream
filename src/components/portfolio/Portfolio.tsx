@@ -783,13 +783,14 @@ export function Portfolio() {
               <div className="rounded-3xl border border-border bg-card/70 p-6 backdrop-blur">
                 <h3 className="font-display text-xl">University of New Haven</h3>
                 <p className="text-sm text-muted-foreground">
-                  M.S. Information Science · 2024–2025 · GPA 3.67
+                  M.S. Information Science · 2024–2025 · GPA 3.67/4
                 </p>
               </div>
               <div className="rounded-3xl border border-border bg-card/70 p-6 backdrop-blur">
                 <h3 className="font-display text-xl">Osmania University</h3>
                 <p className="text-sm text-muted-foreground">
-                  B.A. Public Administration · 2018–2021 · GPA 3.36
+                  B.A. Public Administration · 2018–2021 · GPA 3.36/4
+
                 </p>
               </div>
 
