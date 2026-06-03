@@ -964,29 +964,55 @@ function CollabScene() {
         <circle cx="100" cy="100" r="64" fill="none" stroke="currentColor" strokeDasharray="1 6" opacity="0.6" />
       </motion.svg>
 
+      {/* Floating paper plane — quietly carrying a hello */}
       <motion.div
-        initial={{ y: 8 }}
-        animate={{ y: -8 }}
-        transition={{ duration: 4, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-        className="absolute left-1/2 top-1/2 w-[70%] -translate-x-1/2 -translate-y-1/2"
+        initial={{ y: 6, rotate: -8 }}
+        animate={{ y: -10, rotate: -2 }}
+        transition={{ duration: 5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+        className="absolute left-1/2 top-1/2 w-[58%] -translate-x-1/2 -translate-y-1/2"
       >
-        <div
-          className="rounded-2xl border border-border bg-card p-5"
-          style={{ boxShadow: "0 30px 60px -20px color-mix(in oklab, var(--lavender-deep) 50%, transparent)" }}
-        >
-          <div className="flex items-center gap-1.5">
-            <span className="h-2 w-2 rounded-full bg-lavender-deep/60" />
-            <span className="h-2 w-2 rounded-full bg-lavender/70" />
-            <span className="h-2 w-2 rounded-full bg-pink-soft" />
-          </div>
-          <div className="mt-4 font-display italic text-2xl leading-tight">
-            Let's<br />
-            <span className="text-lavender-deep">Connect!</span>
-          </div>
-          <div className="mt-3 h-1.5 w-2/3 rounded-full bg-lavender-light" />
-          <div className="mt-1.5 h-1.5 w-1/2 rounded-full bg-lavender-light/70" />
-        </div>
+        <svg viewBox="0 0 200 200" className="w-full h-auto" aria-hidden>
+          {/* dashed flight path */}
+          <motion.path
+            d="M 10 170 Q 70 110 110 130 T 195 40"
+            fill="none"
+            stroke="var(--lavender-deep)"
+            strokeOpacity="0.45"
+            strokeWidth="1.5"
+            strokeDasharray="3 6"
+            strokeLinecap="round"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 3.5, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" }}
+          />
+          {/* paper plane body */}
+          <g transform="translate(108 70) rotate(-18)">
+            <path
+              d="M0 30 L80 0 L52 70 L40 44 Z"
+              fill="var(--card)"
+              stroke="var(--lavender-deep)"
+              strokeWidth="1.5"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M40 44 L80 0 L52 70 Z"
+              fill="var(--lavender-light)"
+              stroke="var(--lavender-deep)"
+              strokeWidth="1.2"
+              strokeLinejoin="round"
+              opacity="0.85"
+            />
+            <path
+              d="M0 30 L40 44 L52 70"
+              fill="none"
+              stroke="var(--lavender-deep)"
+              strokeWidth="1"
+              opacity="0.5"
+            />
+          </g>
+        </svg>
       </motion.div>
+
 
       <motion.div
         className="absolute top-4 right-6 text-lavender-deep"
