@@ -32,7 +32,7 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className={`relative px-5 sm:px-8 md:px-10 py-16 md:py-36 ${className}`}>
+    <section id={id} className={`relative px-5 sm:px-8 md:px-10 py-14 md:py-24 ${className}`}>
       {eyebrow && (
         <div className="mb-5 md:mb-6 flex items-center gap-3 text-[10px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-muted-foreground">
           <span className="h-px w-8 md:w-10 bg-lavender" />
@@ -452,13 +452,14 @@ export function Portfolio() {
                 <div>
                   <div className="font-display text-xl">University of New Haven</div>
                   <div className="text-sm text-muted-foreground">
-                    M.S. Information Science · 2024–2025 · GPA 3.67
+                    M.S. Information Science · 2024–2025 · GPA 3.67/4
                   </div>
                 </div>
                 <div>
                   <div className="font-display text-xl">Osmania University</div>
                   <div className="text-sm text-muted-foreground">
-                    B.A. Public Administration · 2018–2021 · GPA 3.36
+                    B.A. Public Administration · 2018–2021 · GPA 3.36/4
+
                   </div>
                 </div>
               </div>
@@ -492,15 +493,16 @@ export function Portfolio() {
                 className={`group relative ${i % 2 === 1 ? "lg:translate-y-16" : ""}`}
                 data-cursor="hover"
               >
-                <div className="relative overflow-hidden rounded-3xl bg-card hover-lift">
-                  <div className="aspect-[4/3] overflow-hidden">
+                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-lavender-light/40 via-card to-pink-soft/30 hover-lift">
+                  <div className="aspect-[4/3] overflow-hidden flex items-center justify-center p-4 md:p-6">
                     <img
                       src={p.img}
                       alt={`${p.title} — ${p.sub} UI/UX case study`}
                       loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+                      className="max-h-full max-w-full object-contain transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
                     />
                   </div>
+
                   <div
                     className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                     style={{
@@ -782,13 +784,14 @@ export function Portfolio() {
               <div className="rounded-3xl border border-border bg-card/70 p-6 backdrop-blur">
                 <h3 className="font-display text-xl">University of New Haven</h3>
                 <p className="text-sm text-muted-foreground">
-                  M.S. Information Science · 2024–2025 · GPA 3.67
+                  M.S. Information Science · 2024–2025 · GPA 3.67/4
                 </p>
               </div>
               <div className="rounded-3xl border border-border bg-card/70 p-6 backdrop-blur">
                 <h3 className="font-display text-xl">Osmania University</h3>
                 <p className="text-sm text-muted-foreground">
-                  B.A. Public Administration · 2018–2021 · GPA 3.36
+                  B.A. Public Administration · 2018–2021 · GPA 3.36/4
+
                 </p>
               </div>
 
