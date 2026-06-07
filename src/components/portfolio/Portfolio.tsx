@@ -282,11 +282,10 @@ export function Portfolio() {
               </a>
             </div>
 
-            <div className="mt-12 md:mt-16 grid max-w-xl grid-cols-3 gap-3 md:gap-6 text-sm">
+            <div className="mt-12 md:mt-16 grid max-w-xl grid-cols-2 gap-3 md:gap-6 text-sm">
               {[
                 ["20+", "Projects"],
                 ["MS", "Info. Science"],
-                ["CT", "USA"],
               ].map(([n, l]) => (
                 <div key={l} className="rounded-2xl border border-border bg-card/50 p-3 md:p-4 text-center md:text-left">
                   <div className="font-display text-2xl md:text-3xl text-lavender-deep">{n}</div>
