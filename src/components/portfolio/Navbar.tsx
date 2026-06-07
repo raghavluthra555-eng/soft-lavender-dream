@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const items = [
-  { href: "#home", label: "Home" },
-  { href: "#focus", label: "Focus" },
-  { href: "#projects", label: "Work" },
-  { href: "#story", label: "My Story" },
-  { href: "#resume", label: "Resume" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#home", label: "Home" },
+  { href: "/#focus", label: "Focus" },
+  { href: "/#projects", label: "Work" },
+  { href: "/my-story", label: "My Story" },
+  { href: "/#resume", label: "Resume" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Navbar() {
