@@ -274,7 +274,7 @@ export function Portfolio() {
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
               <a
-                href="#story"
+                href="/my-story"
                 data-cursor="hover"
                 className="inline-flex items-center gap-3 rounded-pill border border-border bg-card/60 px-6 md:px-7 py-3.5 md:py-4 text-sm backdrop-blur transition-colors hover:bg-lavender-light"
               >
