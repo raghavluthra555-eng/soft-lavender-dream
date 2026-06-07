@@ -431,12 +431,11 @@ export function Portfolio() {
               into visuals that inform, inspire and make an impact.
             </p>
 
-            <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
+            <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3">
               {[
                 ["3+", "Years"],
                 ["20+", "Projects"],
                 ["MS", "UNH '25"],
-                ["CT", "USA"],
               ].map(([n, l]) => (
                 <div
                   key={l}
@@ -446,27 +445,6 @@ export function Portfolio() {
                   <div className="mt-1 text-sm text-muted-foreground">{l}</div>
                 </div>
               ))}
-            </div>
-
-            <div className="mt-10 rounded-3xl border border-border bg-card/60 p-6 backdrop-blur">
-              <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                Education
-              </div>
-              <div className="mt-4 grid gap-4 md:grid-cols-2">
-                <div>
-                  <div className="font-display text-xl">University of New Haven</div>
-                  <div className="text-sm text-muted-foreground">
-                    M.S. Information Science · 2024–2025 · GPA 3.67/4
-                  </div>
-                </div>
-                <div>
-                  <div className="font-display text-xl">Osmania University</div>
-                  <div className="text-sm text-muted-foreground">
-                    B.A. Public Administration · 2018–2021 · GPA 3.36/4
-
-                  </div>
-                </div>
-              </div>
             </div>
           </motion.div>
         </div>
