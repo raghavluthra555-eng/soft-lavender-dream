@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const items = [
-  { href: "#home", label: "Home" },
-  { href: "#focus", label: "Focus" },
-  { href: "#projects", label: "Work" },
-  { href: "#story", label: "My Story" },
-  { href: "#resume", label: "Resume" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#home", label: "Home" },
+  { href: "/#focus", label: "Focus" },
+  { href: "/#projects", label: "Work" },
+  { href: "/my-story", label: "My Story" },
+  { href: "/#resume", label: "Resume" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Navbar() {
@@ -24,7 +24,10 @@ export function Navbar() {
       { rootMargin: "-40% 0px -55% 0px" },
     );
     items.forEach((i) => {
-      const el = document.querySelector(i.href);
+      const hashIdx = i.href.indexOf("#");
+      if (hashIdx === -1) return;
+      const sel = i.href.slice(hashIdx);
+      const el = document.querySelector(sel);
       if (el) obs.observe(el);
     });
     return () => obs.disconnect();
@@ -38,7 +41,7 @@ export function Navbar() {
       className="fixed top-3 left-1/2 z-50 -translate-x-1/2 w-[calc(100%-1.25rem)] md:w-[min(96%,1080px)] max-w-[1080px]"
     >
       <div className="glass rounded-pill px-2 py-1.5 md:px-3 md:py-2 flex items-center justify-between lavender-glow">
-        <a href="#home" className="flex items-center gap-2 pl-2 md:pl-3 pr-1 md:pr-2 shrink-0">
+        <a href="/#home" className="flex items-center gap-2 pl-2 md:pl-3 pr-1 md:pr-2 shrink-0">
           <span
             className="font-display text-base md:text-lg tracking-tight"
             style={{ fontStyle: "italic" }}
@@ -50,7 +53,9 @@ export function Navbar() {
 
         <ul className="hidden md:flex items-center gap-1">
           {items.map((it) => {
-            const isActive = active === it.href.slice(1);
+            const hashIdx = it.href.indexOf("#");
+            const sectionId = hashIdx === -1 ? "" : it.href.slice(hashIdx + 1);
+            const isActive = sectionId !== "" && active === sectionId;
             return (
               <li key={it.href}>
                 <a
@@ -74,7 +79,7 @@ export function Navbar() {
         </ul>
 
         <a
-          href="#contact"
+          href="/#contact"
           data-cursor="hover"
           className="hidden md:inline-flex items-center gap-2 rounded-pill px-5 py-2.5 text-sm text-white transition-all duration-300 hover:scale-[1.03]"
           style={{
@@ -115,7 +120,7 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/#contact"
             onClick={() => setOpen(false)}
             className="mt-2 text-center rounded-pill px-5 py-3 text-sm text-white"
             style={{ background: "linear-gradient(135deg, var(--lavender), var(--lavender-deep))" }}

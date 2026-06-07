@@ -3,7 +3,7 @@ import { Navbar } from "@/components/portfolio/Navbar";
 import { LavenderCursor } from "@/components/portfolio/Cursor";
 import { Intro } from "@/components/portfolio/Intro";
 import { Leaf, Sparkle, Squiggle, CircleOrbit } from "@/components/portfolio/Decor";
-import portrait from "@/assets/portfolio/portrait.png";
+import portrait from "@/assets/portfolio/portrait-hero.jpg";
 import workspace from "@/assets/portfolio/workspace.png";
 import collab from "@/assets/portfolio/collab.png";
 import education from "@/assets/portfolio/education.jpg";
@@ -242,7 +242,12 @@ export function Portfolio() {
                 systems
                 <Squiggle className="absolute -bottom-2 md:-bottom-3 left-0 w-full text-lavender-deep" />
               </span>{" "}
-              and why some designs just feel easier.
+              and why some{" "}
+              <span className="relative inline-block">
+                designs
+                <Squiggle className="absolute -bottom-2 md:-bottom-3 left-0 w-full text-lavender-deep" />
+              </span>{" "}
+              just feel easier.
             </h1>
 
             <p className="mt-6 md:mt-8 max-w-xl text-base md:text-lg text-muted-foreground text-pretty">
@@ -269,7 +274,7 @@ export function Portfolio() {
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
               <a
-                href="#story"
+                href="/my-story"
                 data-cursor="hover"
                 className="inline-flex items-center gap-3 rounded-pill border border-border bg-card/60 px-6 md:px-7 py-3.5 md:py-4 text-sm backdrop-blur transition-colors hover:bg-lavender-light"
               >
@@ -277,11 +282,10 @@ export function Portfolio() {
               </a>
             </div>
 
-            <div className="mt-12 md:mt-16 grid max-w-xl grid-cols-3 gap-3 md:gap-6 text-sm">
+            <div className="mt-12 md:mt-16 grid max-w-xl grid-cols-2 gap-3 md:gap-6 text-sm">
               {[
                 ["20+", "Projects"],
                 ["MS", "Info. Science"],
-                ["CT", "USA"],
               ].map(([n, l]) => (
                 <div key={l} className="rounded-2xl border border-border bg-card/50 p-3 md:p-4 text-center md:text-left">
                   <div className="font-display text-2xl md:text-3xl text-lavender-deep">{n}</div>
@@ -427,12 +431,11 @@ export function Portfolio() {
               into visuals that inform, inspire and make an impact.
             </p>
 
-            <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
+            <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3">
               {[
                 ["3+", "Years"],
                 ["20+", "Projects"],
                 ["MS", "UNH '25"],
-                ["CT", "USA"],
               ].map(([n, l]) => (
                 <div
                   key={l}
@@ -442,27 +445,6 @@ export function Portfolio() {
                   <div className="mt-1 text-sm text-muted-foreground">{l}</div>
                 </div>
               ))}
-            </div>
-
-            <div className="mt-10 rounded-3xl border border-border bg-card/60 p-6 backdrop-blur">
-              <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                Education
-              </div>
-              <div className="mt-4 grid gap-4 md:grid-cols-2">
-                <div>
-                  <div className="font-display text-xl">University of New Haven</div>
-                  <div className="text-sm text-muted-foreground">
-                    M.S. Information Science · 2024–2025 · GPA 3.67/4
-                  </div>
-                </div>
-                <div>
-                  <div className="font-display text-xl">Osmania University</div>
-                  <div className="text-sm text-muted-foreground">
-                    B.A. Public Administration · 2018–2021 · GPA 3.36/4
-
-                  </div>
-                </div>
-              </div>
             </div>
           </motion.div>
         </div>
@@ -725,6 +707,18 @@ export function Portfolio() {
                 Assumptions are expensive. Research is cheaper.
               </p>
             </blockquote>
+            <a
+              href="/my-story"
+              data-cursor="hover"
+              className="mt-8 inline-flex items-center gap-3 rounded-pill px-7 py-4 text-sm text-white transition-transform duration-300 hover:-translate-y-0.5"
+              style={{
+                background: "linear-gradient(135deg, var(--lavender), var(--lavender-deep))",
+                boxShadow: "0 20px 50px -15px color-mix(in oklab, var(--lavender-deep) 70%, transparent)",
+              }}
+            >
+              Read the full story
+              <span aria-hidden>→</span>
+            </a>
           </motion.div>
         </div>
       </Section>
@@ -779,23 +773,6 @@ export function Portfolio() {
 
             <div className="md:col-span-5 space-y-6">
               <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                Education
-              </div>
-              <div className="rounded-3xl border border-border bg-card/70 p-6 backdrop-blur">
-                <h3 className="font-display text-xl">University of New Haven</h3>
-                <p className="text-sm text-muted-foreground">
-                  M.S. Information Science · 2024–2025 · GPA 3.67/4
-                </p>
-              </div>
-              <div className="rounded-3xl border border-border bg-card/70 p-6 backdrop-blur">
-                <h3 className="font-display text-xl">Osmania University</h3>
-                <p className="text-sm text-muted-foreground">
-                  B.A. Public Administration · 2018–2021 · GPA 3.36/4
-
-                </p>
-              </div>
-
-              <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground pt-2">
                 Tools
               </div>
               <div className="flex flex-wrap gap-2">
