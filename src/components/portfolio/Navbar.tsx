@@ -41,7 +41,7 @@ export function Navbar() {
       className="fixed top-3 left-1/2 z-50 -translate-x-1/2 w-[calc(100%-1.25rem)] md:w-[min(96%,1080px)] max-w-[1080px]"
     >
       <div className="glass rounded-pill px-2 py-1.5 md:px-3 md:py-2 flex items-center justify-between lavender-glow">
-        <a href="#home" className="flex items-center gap-2 pl-2 md:pl-3 pr-1 md:pr-2 shrink-0">
+        <a href="/#home" className="flex items-center gap-2 pl-2 md:pl-3 pr-1 md:pr-2 shrink-0">
           <span
             className="font-display text-base md:text-lg tracking-tight"
             style={{ fontStyle: "italic" }}
