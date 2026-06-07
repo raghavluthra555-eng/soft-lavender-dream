@@ -53,7 +53,9 @@ export function Navbar() {
 
         <ul className="hidden md:flex items-center gap-1">
           {items.map((it) => {
-            const isActive = active === it.href.slice(1);
+            const hashIdx = it.href.indexOf("#");
+            const sectionId = hashIdx === -1 ? "" : it.href.slice(hashIdx + 1);
+            const isActive = sectionId !== "" && active === sectionId;
             return (
               <li key={it.href}>
                 <a
