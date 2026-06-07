@@ -120,7 +120,7 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/#contact"
             onClick={() => setOpen(false)}
             className="mt-2 text-center rounded-pill px-5 py-3 text-sm text-white"
             style={{ background: "linear-gradient(135deg, var(--lavender), var(--lavender-deep))" }}
