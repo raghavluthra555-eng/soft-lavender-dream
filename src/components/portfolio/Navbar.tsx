@@ -79,7 +79,7 @@ export function Navbar() {
         </ul>
 
         <a
-          href="#contact"
+          href="/#contact"
           data-cursor="hover"
           className="hidden md:inline-flex items-center gap-2 rounded-pill px-5 py-2.5 text-sm text-white transition-all duration-300 hover:scale-[1.03]"
           style={{
