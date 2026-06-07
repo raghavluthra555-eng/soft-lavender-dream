@@ -24,7 +24,10 @@ export function Navbar() {
       { rootMargin: "-40% 0px -55% 0px" },
     );
     items.forEach((i) => {
-      const el = document.querySelector(i.href);
+      const hashIdx = i.href.indexOf("#");
+      if (hashIdx === -1) return;
+      const sel = i.href.slice(hashIdx);
+      const el = document.querySelector(sel);
       if (el) obs.observe(el);
     });
     return () => obs.disconnect();
