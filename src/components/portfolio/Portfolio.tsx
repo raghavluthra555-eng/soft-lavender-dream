@@ -707,6 +707,18 @@ export function Portfolio() {
                 Assumptions are expensive. Research is cheaper.
               </p>
             </blockquote>
+            <a
+              href="/my-story"
+              data-cursor="hover"
+              className="mt-8 inline-flex items-center gap-3 rounded-pill px-7 py-4 text-sm text-white transition-transform duration-300 hover:-translate-y-0.5"
+              style={{
+                background: "linear-gradient(135deg, var(--lavender), var(--lavender-deep))",
+                boxShadow: "0 20px 50px -15px color-mix(in oklab, var(--lavender-deep) 70%, transparent)",
+              }}
+            >
+              Read the full story
+              <span aria-hidden>→</span>
+            </a>
           </motion.div>
         </div>
       </Section>
