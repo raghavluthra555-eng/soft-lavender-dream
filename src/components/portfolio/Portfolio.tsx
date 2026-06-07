@@ -242,7 +242,12 @@ export function Portfolio() {
                 systems
                 <Squiggle className="absolute -bottom-2 md:-bottom-3 left-0 w-full text-lavender-deep" />
               </span>{" "}
-              and why some designs just feel easier.
+              and why some{" "}
+              <span className="relative inline-block">
+                designs
+                <Squiggle className="absolute -bottom-2 md:-bottom-3 left-0 w-full text-lavender-deep" />
+              </span>{" "}
+              just feel easier.
             </h1>
 
             <p className="mt-6 md:mt-8 max-w-xl text-base md:text-lg text-muted-foreground text-pretty">
