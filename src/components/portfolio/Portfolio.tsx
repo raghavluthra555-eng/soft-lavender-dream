@@ -3,7 +3,7 @@ import { Navbar } from "@/components/portfolio/Navbar";
 import { LavenderCursor } from "@/components/portfolio/Cursor";
 import { Intro } from "@/components/portfolio/Intro";
 import { Leaf, Sparkle, Squiggle, CircleOrbit } from "@/components/portfolio/Decor";
-import portrait from "@/assets/portfolio/portrait-hero.jpg";
+import portrait from "@/assets/portfolio/meghna-hero.jpg";
 import workspace from "@/assets/portfolio/workspace.png";
 import collab from "@/assets/portfolio/collab.png";
 import education from "@/assets/portfolio/education.jpg";
@@ -233,7 +233,7 @@ export function Portfolio() {
           >
             <div className="mb-5 flex items-center gap-3 text-[10px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-muted-foreground">
               <Sparkle className="h-3 w-3 text-lavender-deep shrink-0" />
-              <span>UI / UX Designer · Portfolio 2025</span>
+              <span>UI / UX Designer · Portfolio</span>
             </div>
 
             <h1 className="font-display text-[clamp(2.1rem,8.5vw,5.6rem)] leading-[1.05] md:leading-[1.02] text-balance">
@@ -849,10 +849,10 @@ export function Portfolio() {
             </div>
 
             {/* Contact tiles — email wider for uniformity */}
-            <div className="relative mt-12 grid gap-4 md:grid-cols-4 text-sm">
+            <div className="relative mt-12 grid gap-4 md:grid-cols-2 text-sm">
               <a
                 href="mailto:Meghanareddymadi@gmail.com"
-                className="md:col-span-2 group rounded-2xl border border-border bg-card/80 p-5 backdrop-blur hover-lift flex items-center gap-4 min-w-0"
+                className="group rounded-2xl border border-border bg-card/80 p-5 backdrop-blur hover-lift flex items-center gap-4 min-w-0"
               >
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-lavender-light text-lavender-deep">✉</span>
                 <span className="min-w-0 flex-1">
@@ -874,13 +874,6 @@ export function Portfolio() {
                   </span>
                 </span>
               </a>
-              <div className="rounded-2xl border border-border bg-card/80 p-5 backdrop-blur flex items-center gap-4">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-lavender-light text-lavender-deep">◎</span>
-                <span>
-                  <span className="block text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Location</span>
-                  <span className="mt-1 block font-display text-base md:text-lg">West Haven, CT</span>
-                </span>
-              </div>
             </div>
           </motion.div>
 
@@ -895,7 +888,18 @@ export function Portfolio() {
               </div>
             </div>
             <div className="text-center text-xs order-3 md:order-2">
-              © {new Date().getFullYear()} Meghana Reddy Madi · All rights reserved
+              <div>© {new Date().getFullYear()} Meghana Reddy Madi · All rights reserved</div>
+              <div className="mt-1">
+                Designed & developed by{" "}
+                <a
+                  href="https://fluxstudio.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lavender-deep hover:text-foreground transition-colors"
+                >
+                  Flux Studio
+                </a>
+              </div>
             </div>
             <div className="flex justify-center md:justify-end gap-4 order-2 md:order-3">
               <a
