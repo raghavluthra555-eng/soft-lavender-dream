@@ -12,4 +12,9 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Force-enable nitro so Vercel builds produce the vercel preset output
+  // (dist/config.json + serverless function). Without this, the plugin skips
+  // nitro outside of Lovable's sandbox and the postbuild script can't find
+  // dist/config.json.
+  nitro: true,
 });
